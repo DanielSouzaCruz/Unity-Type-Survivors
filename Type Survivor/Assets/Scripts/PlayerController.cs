@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log(moveInput);
 
+        moveInput.Normalize();
+
         transform.position += moveInput * moveSpeed * Time.deltaTime;
     }
 }
