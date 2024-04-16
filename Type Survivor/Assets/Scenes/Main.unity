@@ -344,6 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theRB: {fileID: 837019256}
   moveSpeed: 1
+  damage: 5
 --- !u!50 &837019256
 Rigidbody2D:
   serializedVersion: 4
@@ -451,9 +452,10 @@ GameObject:
   - component: {fileID: 873193433}
   - component: {fileID: 873193434}
   - component: {fileID: 873193435}
+  - component: {fileID: 873193436}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,6 +548,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.29
+--- !u!114 &873193436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873193431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97125701c8aba3142b395421de88c630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 0
 --- !u!1 &1403050195
 GameObject:
   m_ObjectHideFlags: 0
