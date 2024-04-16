@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 837019257}
   - component: {fileID: 837019256}
   - component: {fileID: 837019255}
+  - component: {fileID: 837019259}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -422,6 +423,22 @@ Transform:
   - {fileID: 20499302}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837019259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837019254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6173957aa0ee55f499e9e4c380fcbdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 20499302}
+  speed: 0.5
+  minSize: 0.9
+  maxSize: 1.1
 --- !u!1 &873193431
 GameObject:
   m_ObjectHideFlags: 0
