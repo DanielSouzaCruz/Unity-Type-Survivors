@@ -345,6 +345,7 @@ MonoBehaviour:
   theRB: {fileID: 837019256}
   moveSpeed: 1
   damage: 5
+  hitWaitTime: 1
 --- !u!50 &837019256
 Rigidbody2D:
   serializedVersion: 4
@@ -560,8 +561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97125701c8aba3142b395421de88c630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 0
+  currentHealth: 65
+  maxHealth: 100
 --- !u!1 &1403050195
 GameObject:
   m_ObjectHideFlags: 0
