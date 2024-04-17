@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public float currentHealth, maxHealth;
+
+    public Slider healthSlider;
 
 
     public static PlayerHealthController instance;
@@ -19,6 +22,8 @@ public class PlayerHealthController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
 
     // Update is called once per frame
@@ -36,5 +41,7 @@ public class PlayerHealthController : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        healthSlider.value = currentHealth;
     }
 }
