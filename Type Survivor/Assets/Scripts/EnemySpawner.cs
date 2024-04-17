@@ -12,12 +12,15 @@ public class EnemySpawner : MonoBehaviour
 
     public Transform minSpawn, maxSpawn;
     private Transform target;
+    private float dspawnDistance;
+    private List<GameObject> spawnedEnemies = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
         spawnCounter = timeToSpawn;
         target = PlayerHealthController.instance.transform;
+        dspawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 5f;
     }
 
     // Update is called once per frame
@@ -28,7 +31,8 @@ public class EnemySpawner : MonoBehaviour
         {
             spawnCounter = timeToSpawn;
 
-            Instantiate(enemyToSpawn, SelectSpawnPoint() , transform.rotation);
+            GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint() , transform.rotation);
+            spawnedEnemies.Add(newEnemy);
         }
 
         transform.position = target.position;
