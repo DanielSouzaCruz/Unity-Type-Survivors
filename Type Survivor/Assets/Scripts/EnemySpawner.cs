@@ -11,11 +11,13 @@ public class EnemySpawner : MonoBehaviour
     private float spawnCounter;
 
     public Transform minSpawn, maxSpawn;
+    private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnCounter = timeToSpawn;
+        target = PlayerHealthController.instance.transform;
     }
 
     // Update is called once per frame
@@ -28,6 +30,9 @@ public class EnemySpawner : MonoBehaviour
 
             Instantiate(enemyToSpawn, SelectSpawnPoint() , transform.rotation);
         }
+
+        transform.position = target.position;
+
     }
 
     public Vector3 SelectSpawnPoint()

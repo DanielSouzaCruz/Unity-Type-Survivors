@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        target = FindFirstObjectByType<PlayerController>().transform;
+        target = PlayerHealthController.instance.transform;
     }
 
     // Update is called once per frame
