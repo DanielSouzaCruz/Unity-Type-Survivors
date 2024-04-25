@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
 
     public float timeToSpawn;
     private float spawnCounter;
+    public int checkPerFrame;
+    private int EnemyToCheck;
 
     public Transform minSpawn, maxSpawn;
     private Transform target;
@@ -36,6 +38,37 @@ public class EnemySpawner : MonoBehaviour
         }
 
         transform.position = target.position;
+
+        int checkTarget = EnemyToCheck + checkPerFrame;
+
+        while(EnemyToCheck < checkTarget)
+        {
+            if(EnemyToCheck < spawnedEnemies.Count )
+            {
+                if (spawnedEnemies[EnemyToCheck] != null)
+                {
+                    if(Vector3.Distance(transform.position, spawnedEnemies[EnemyToCheck].transform.position) > dspawnDistance)
+                    {
+                        Destroy(spawnedEnemies[EnemyToCheck]);
+                        spawnedEnemies.RemoveAt(EnemyToCheck);
+                        checkTarget--;
+                    }
+                    else
+                    {
+                        EnemyToCheck++;
+                    }
+                } else
+                {
+                    spawnedEnemies.RemoveAt(EnemyToCheck);
+                    checkTarget--;
+                }
+            }
+            else
+            {
+                EnemyToCheck = 0;
+                checkTarget = 0;
+            }
+        }
 
     }
 
