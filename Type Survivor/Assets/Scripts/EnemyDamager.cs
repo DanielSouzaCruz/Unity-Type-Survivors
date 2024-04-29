@@ -6,10 +6,11 @@ public class EnemyDamager : MonoBehaviour
 {
 
     public float damageAmount;
+    public float lifeTime;
 
     void Start()
     {
-        
+        Destroy(gameObject, lifeTime);
     }
 
     // Update is called once per frame
