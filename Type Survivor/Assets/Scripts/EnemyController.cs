@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
     public float damage;
     public float hitWaitTime = 1f;
+    public float health = 5f;
 
     private float hitCounter;
 
@@ -40,6 +41,15 @@ public class EnemyController : MonoBehaviour
             PlayerHealthController.instance.TakeDamage(damage);
 
             hitCounter = hitWaitTime;
+        }
+    }
+
+    public void TakeDamage(float damageToTake)
+    {
+        health -= damageToTake;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

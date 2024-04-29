@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8163804142432148994}
   m_Layer: 0
   m_Name: Enemy - Vagalume
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   moveSpeed: 1
   damage: 5
   hitWaitTime: 1
+  health: 5
 --- !u!114 &8163804142432148994
 MonoBehaviour:
   m_ObjectHideFlags: 0
