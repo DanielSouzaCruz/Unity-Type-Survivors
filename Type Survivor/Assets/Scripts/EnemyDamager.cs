@@ -7,6 +7,7 @@ public class EnemyDamager : MonoBehaviour
 
     public float damageAmount;
     public float lifeTime, growSpeed = 5f;
+    public bool shoudKnockBack;
 
     private Vector3 targetSize;
 
@@ -39,7 +40,7 @@ public class EnemyDamager : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            collision.GetComponent<EnemyController>().TakeDamage(damageAmount);
+            collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shoudKnockBack);
         }
     }
 }

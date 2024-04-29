@@ -48698,8 +48698,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5aec0ca292f0c448a9e5f9cc303404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 5
+  damageAmount: 1
   lifeTime: 3
+  growSpeed: 5
+  shoudKnockBack: 1
 --- !u!1 &1782246068
 GameObject:
   m_ObjectHideFlags: 0
