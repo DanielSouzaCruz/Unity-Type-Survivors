@@ -9,6 +9,7 @@ public class DamageNumber : MonoBehaviour
 
     public float lifeTime;
     private float lifeCounter;
+    public float floatSpeed = 1f;
 
     void Start()
     {
@@ -25,10 +26,12 @@ public class DamageNumber : MonoBehaviour
 
             if(lifeCounter <= 0 )
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                DamageNumberController.instance.PlaceInPool(this);
             }
         }
 
+        transform.position += Vector3.up * floatSpeed * Time.deltaTime;
         
     }
 

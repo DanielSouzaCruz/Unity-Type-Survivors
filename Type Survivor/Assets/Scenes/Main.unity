@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageText: {fileID: 612255495}
   lifeTime: 2
+  floatSpeed: 1
 --- !u!1 &712036194
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +929,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -598441709
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1025132536

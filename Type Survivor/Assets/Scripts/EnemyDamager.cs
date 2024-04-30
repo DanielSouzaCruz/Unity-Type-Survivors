@@ -8,6 +8,7 @@ public class EnemyDamager : MonoBehaviour
     public float damageAmount;
     public float lifeTime, growSpeed = 5f;
     public bool shoudKnockBack;
+    public bool destroyParent;
 
     private Vector3 targetSize;
 
@@ -32,6 +33,11 @@ public class EnemyDamager : MonoBehaviour
             if(transform.localScale.x == 0)
             {
                 Destroy(gameObject);
+
+                if (destroyParent)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
         }
     }
