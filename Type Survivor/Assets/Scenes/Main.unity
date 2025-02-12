@@ -1034,6 +1034,25 @@ MonoBehaviour:
   checkPerFrame: 50
   minSpawn: {fileID: 1782246069}
   maxSpawn: {fileID: 442349813}
+  waves:
+  - enemyToSpawn: {fileID: 5282475984922568209, guid: 75dcdcac92cd461419f298655dab92a1, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 3867284998078886321, guid: 30f65d60d6c6d914689d769efc5bb32b, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 4174388444073426909, guid: ff9299a544e16a842a25ba0769b6a456, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 1970152964597731303, guid: e45f21daef85e304fb83e6e79fec6afe, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.25
+  - enemyToSpawn: {fileID: 7949191516118802181, guid: b1fd6f7be4092ba449b061cbc31e76af, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.25
+  - enemyToSpawn: {fileID: 5256656855006755733, guid: 6c6bc0455dcddd84caa1ace8ef151ac1, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.25
 --- !u!4 &1253240733
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,7 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10806f74290225d4daf796def6078b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 180
+  rotateSpeed: 360
   holder: {fileID: 1531631347}
   fireballToSpawn: {fileID: 1025132537}
   timeBetweenSpawn: 4
@@ -48999,10 +49018,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5aec0ca292f0c448a9e5f9cc303404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
+  damageAmount: 10
   lifeTime: 3
   growSpeed: 5
   shoudKnockBack: 1
+  destroyParent: 0
 --- !u!1 &1782246068
 GameObject:
   m_ObjectHideFlags: 0
