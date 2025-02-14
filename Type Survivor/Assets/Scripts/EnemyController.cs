@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
     private float hitCounter;
     private float knockBackCounter;
 
+    public int expToGive = 1;
+
     private Transform target;
 
 
@@ -67,6 +69,8 @@ public class EnemyController : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+
+            ExperienceLevelController.Instance.spawnExp(transform.position, expToGive);
         }
 
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);

@@ -12,6 +12,7 @@ public class ExperienceLevelController : MonoBehaviour
     }
 
     public int currentExperience;
+    public ExpPickup pickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +28,10 @@ public class ExperienceLevelController : MonoBehaviour
     public void GetExp(int amountToGet)
     {
         currentExperience = amountToGet;
+    }
+
+    public void spawnExp(Vector3 position, int expValue)
+    {
+        Instantiate(pickup, position, Quaternion.identity).expValue = expValue;
     }
 }
