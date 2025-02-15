@@ -13,10 +13,17 @@ public class ExperienceLevelController : MonoBehaviour
 
     public int currentExperience;
     public ExpPickup pickup;
+
+    public List<int> expLevels;
+    public int currentLevel = 1, levelCount = 100;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        while(expLevels.Count < levelCount)
+        {
+            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.1f));
+        }
     }
 
     // Update is called once per frame
@@ -27,11 +34,27 @@ public class ExperienceLevelController : MonoBehaviour
 
     public void GetExp(int amountToGet)
     {
-        currentExperience = amountToGet;
+        currentExperience += amountToGet;
+
+        if(currentExperience >= expLevels[currentLevel])
+        {
+            LevelUp();
+        }
     }
 
-    public void spawnExp(Vector3 position, int expValue)
+    public void SpawnExp(Vector3 position, int expValue)
     {
         Instantiate(pickup, position, Quaternion.identity).expValue = expValue;
+    }
+
+    public void LevelUp()
+    {
+        currentExperience -= expLevels[currentLevel];
+        currentLevel++;
+
+        if(currentLevel >= expLevels.Count)
+        {
+            currentLevel = expLevels.Count - 1;
+        }
     }
 }
