@@ -959,6 +959,7 @@ MonoBehaviour:
   moveSpeed: 2
   anim: {fileID: 873193434}
   pickupRange: 1.5
+  activeWeapon: {fileID: 1449371149}
 --- !u!95 &873193434
 Animator:
   serializedVersion: 7
@@ -1689,9 +1690,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10806f74290225d4daf796def6078b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 360
+  stats:
+  - speed: 1
+    damage: 5
+    range: 1
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  - speed: 2
+    damage: 10
+    range: 2
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  - speed: 3
+    damage: 15
+    range: 3
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  - speed: 4
+    damage: 20
+    range: 4
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  - speed: 5
+    damage: 25
+    range: 5
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  weaponLevel: 0
+  statsUpdated: 0
+  rotateSpeed: 120
   holder: {fileID: 1531631347}
   fireballToSpawn: {fileID: 1025132537}
+  damager: {fileID: 1539637175}
   timeBetweenSpawn: 4
 --- !u!1 &1483524900
 GameObject:
@@ -49383,7 +49418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5aec0ca292f0c448a9e5f9cc303404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 5
   lifeTime: 3
   growSpeed: 5
   shoudKnockBack: 1
