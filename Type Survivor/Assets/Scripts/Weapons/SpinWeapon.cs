@@ -15,7 +15,7 @@ public class SpinWeapon : Weapon
     {
         SetStats();
 
-        UiController.instance.levelUpButtons[0].UpdateButtonDisplay(this);
+        //UiController.instance.levelUpButtons[0].UpdateButtonDisplay(this);
     }
 
     // Update is called once per frame
