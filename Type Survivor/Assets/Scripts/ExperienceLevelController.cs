@@ -64,6 +64,7 @@ public class ExperienceLevelController : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
+        //UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
+        UiController.instance.levelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.assignedWeapons[0]);
     }
 }
