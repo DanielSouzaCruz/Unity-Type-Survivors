@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     [HideInInspector]
     public bool statsUpdated;
 
+    public Sprite icon;
 
     public void LevelUp()
     {
@@ -27,4 +28,5 @@ public class Weapon : MonoBehaviour
 public class WeaponStats
 {
     public float speed, damage, range, timeBetweenAttacks, amount, duration;
+    public string upgradeText;
 }

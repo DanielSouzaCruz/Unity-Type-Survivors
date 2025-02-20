@@ -18,6 +18,8 @@ public class UiController : MonoBehaviour
     public Slider explvlSlider;
     public TMP_Text explvlText;
 
+    public LevelUpSelectionButton[] levelUpButtons;
+
     // Start is called before the first frame update
     void Start()
     {
