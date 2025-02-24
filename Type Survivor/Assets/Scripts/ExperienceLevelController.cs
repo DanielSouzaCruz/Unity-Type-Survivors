@@ -16,6 +16,7 @@ public class ExperienceLevelController : MonoBehaviour
 
     public List<int> expLevels;
     public int currentLevel = 1, levelCount = 100;
+    public List<Weapon> weaponsToUpgrade;
 
     // Start is called before the first frame update
     void Start()
@@ -65,8 +66,52 @@ public class ExperienceLevelController : MonoBehaviour
         Time.timeScale = 0f;
 
         //UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
-        UiController.instance.levelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.assignedWeapons[0]);
-        UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[0]);
-        UiController.instance.levelUpButtons[2].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[1]);
+        //UiController.instance.levelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.assignedWeapons[0]);
+        //UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[0]);
+        //UiController.instance.levelUpButtons[2].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[1]);
+
+        weaponsToUpgrade.Clear();
+        List<Weapon> availableWeapons = new List<Weapon>();
+        availableWeapons.AddRange(PlayerController.instance.assignedWeapons);
+
+        if(availableWeapons.Count > 0 )
+        {
+            int selected = Random.Range(0, availableWeapons.Count);
+            weaponsToUpgrade.Add(availableWeapons[selected]);
+            availableWeapons.RemoveAt(selected);
+        }
+
+        if(PlayerController.instance.assignedWeapons.Count + PlayerController.instance.fullyLevelledWeapons.Count < PlayerController.instance.maxWeapons)
+        {
+            availableWeapons.AddRange(PlayerController.instance.unassignedWeapons);
+        }
+
+        
+
+        for(int i = weaponsToUpgrade.Count; i < 3; i++)
+        {
+            if (availableWeapons.Count > 0)
+            {
+                int selected = Random.Range(0, availableWeapons.Count);
+                weaponsToUpgrade.Add(availableWeapons[selected]);
+                availableWeapons.RemoveAt(selected);
+            }
+        }
+
+        for(int i = 0; i < weaponsToUpgrade.Count; i++)
+        {
+            UiController.instance.levelUpButtons[i].UpdateButtonDisplay(weaponsToUpgrade[i]);
+        }
+
+        for(int i =0; i < UiController.instance.levelUpButtons.Length; i++)
+        {
+            if(i < weaponsToUpgrade.Count)
+            {
+                UiController.instance.levelUpButtons[i].gameObject.SetActive(true);
+            } else
+            {
+                UiController.instance.levelUpButtons[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
