@@ -59,4 +59,11 @@ public class PlayerController : MonoBehaviour
             unassignedWeapons.RemoveAt(weaponNumber);
         }
     }
+
+    public void AddWeapon(Weapon weaponToAdd)
+    {
+        weaponToAdd.gameObject.SetActive(true);
+        assignedWeapons.Add(weaponToAdd);
+        unassignedWeapons.Remove(weaponToAdd);
+    }
 }
