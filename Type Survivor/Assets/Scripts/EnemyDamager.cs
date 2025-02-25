@@ -9,6 +9,7 @@ public class EnemyDamager : MonoBehaviour
     public float lifeTime, growSpeed = 5f;
     public bool shoudKnockBack;
     public bool destroyParent;
+    public bool destroyOnInpact;
 
     public bool damageOverTime;
     public float timeBetweenDamage;
@@ -78,6 +79,11 @@ public class EnemyDamager : MonoBehaviour
             if(collision.tag == "Enemy")
             {
                 collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shoudKnockBack);
+
+                if(destroyOnInpact == true)
+                {
+                    Destroy(gameObject);
+                }
             }
         } else
         {
