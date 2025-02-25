@@ -15843,6 +15843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 521158417}
+  - component: {fileID: 521158418}
   m_Layer: 0
   m_Name: Bright Zone
   m_TagString: Untagged
@@ -15866,6 +15867,51 @@ Transform:
   - {fileID: 635801968}
   m_Father: {fileID: 411807797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521158418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521158416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf22d4fae05ec214d93e6fc35d739535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+  - speed: 0.5
+    damage: 2
+    range: 1
+    timeBetweenAttacks: 8
+    amount: 0
+    duration: 7
+    upgradeText: Dano +1
+  - speed: 0.5
+    damage: 3
+    range: 1
+    timeBetweenAttacks: 8
+    amount: 0
+    duration: 7
+    upgradeText: Area x 1.1
+  - speed: 0.5
+    damage: 3
+    range: 1.1
+    timeBetweenAttacks: 8
+    amount: 0
+    duration: 7
+    upgradeText: Diminui a recarga
+  - speed: 0.4
+    damage: 3
+    range: 1.1
+    timeBetweenAttacks: 8
+    amount: 0
+    duration: 7
+    upgradeText: "Evolu\xE7\xE3o Maxima"
+  weaponLevel: 0
+  statsUpdated: 0
+  icon: {fileID: 21300000, guid: 0c78c8dd7f0745146b5b5c4fad8288e4, type: 3}
+  damager: {fileID: 635801969}
 --- !u!1 &577689696
 GameObject:
   m_ObjectHideFlags: 0
@@ -16142,7 +16188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &635801968
 Transform:
   m_ObjectHideFlags: 0
@@ -17062,7 +17108,8 @@ MonoBehaviour:
   - {fileID: 1770755539}
   - {fileID: 662517738}
   - {fileID: 1834905499}
-  assignedWeapons: []
+  assignedWeapons:
+  - {fileID: 521158418}
   maxWeapons: 3
   fullyLevelledWeapons: []
 --- !u!95 &873193434
