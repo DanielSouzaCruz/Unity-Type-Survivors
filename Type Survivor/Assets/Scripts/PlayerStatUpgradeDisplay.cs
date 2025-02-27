@@ -9,5 +9,20 @@ public class PlayerStatUpgradeDisplay : MonoBehaviour
 
     public GameObject upgradeButton;
 
+
+    public void UpdateDisplay(int cost, float oldValue, float newValue)
+    {
+        valueText.text = "Value: " + oldValue.ToString("F1") + "->" + newValue.ToString("F1");
+        costText.text = "Custa: " + cost;
+
+        if(cost <= CoinController.instance.currentCoins)
+        {
+            upgradeButton.SetActive(true);
+        } else
+        {
+            upgradeButton.SetActive(false);
+        }
+    }
+
     
 }

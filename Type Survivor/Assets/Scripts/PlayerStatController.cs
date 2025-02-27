@@ -14,7 +14,7 @@ public class PlayerStatController : MonoBehaviour
     public List<PlayerStatValue> moveSpeed, health, pickupRange, maxWeapons;
     public int moveSpeedLevelCount, healthLevelCount, pickupRangeLevelCount;
 
-    public int moveSpeedLevel, healthLevelLevel, pickupRangeLevel, maxWeaponsLevel;
+    public int moveSpeedLevel, healthLevel, pickupRangeLevel, maxWeaponsLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,16 @@ public class PlayerStatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void UpdateDisplay()
+    {
+        UiController.instance.moveSpeedUpgradeDisplay.UpdateDisplay(moveSpeed[moveSpeedLevel + 1].cost, moveSpeed[moveSpeedLevel].value, moveSpeed[moveSpeedLevel + 1].value);
+        UiController.instance.healthUpgradeDisplay.UpdateDisplay(health[healthLevel + 1].cost, health[healthLevel].value, health[healthLevel + 1].value);
+        UiController.instance.pickupRangeUpgradeDisplay.UpdateDisplay(pickupRange[pickupRangeLevel + 1].cost, pickupRange[pickupRangeLevel].value, pickupRange[pickupRangeLevel + 1].value);
+        UiController.instance.maxWeaponsUpgradeDisplay.UpdateDisplay(maxWeapons[maxWeaponsLevel + 1].cost, maxWeapons[maxWeaponsLevel].value, maxWeapons[maxWeaponsLevel + 1].value);
+
     }
 }
 

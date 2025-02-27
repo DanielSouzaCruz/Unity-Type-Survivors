@@ -23,6 +23,8 @@ public class UiController : MonoBehaviour
 
     public TMP_Text coinText;
 
+    public PlayerStatUpgradeDisplay moveSpeedUpgradeDisplay, healthUpgradeDisplay, pickupRangeUpgradeDisplay, maxWeaponsUpgradeDisplay;
+
     // Start is called before the first frame update
     void Start()
     {

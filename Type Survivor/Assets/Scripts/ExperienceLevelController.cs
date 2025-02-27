@@ -65,10 +65,6 @@ public class ExperienceLevelController : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        //UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
-        //UiController.instance.levelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.assignedWeapons[0]);
-        //UiController.instance.levelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[0]);
-        //UiController.instance.levelUpButtons[2].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[1]);
 
         weaponsToUpgrade.Clear();
         List<Weapon> availableWeapons = new List<Weapon>();
@@ -113,5 +109,7 @@ public class ExperienceLevelController : MonoBehaviour
                 UiController.instance.levelUpButtons[i].gameObject.SetActive(false);
             }
         }
+
+        PlayerStatController.instance.UpdateDisplay();
     }
 }

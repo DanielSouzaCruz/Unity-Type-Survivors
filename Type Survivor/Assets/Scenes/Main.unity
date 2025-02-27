@@ -3046,7 +3046,7 @@ MonoBehaviour:
   healthLevelCount: 50
   pickupRangeLevelCount: 50
   moveSpeedLevel: 0
-  healthLevelLevel: 0
+  healthLevel: 0
   pickupRangeLevel: 0
   maxWeaponsLevel: 0
 --- !u!4 &626365303
@@ -59650,6 +59650,10 @@ MonoBehaviour:
   - {fileID: 2120524535}
   levelUpPanel: {fileID: 141529851}
   coinText: {fileID: 159335673}
+  moveSpeedUpgradeDisplay: {fileID: 365885993}
+  healthUpgradeDisplay: {fileID: 1146800195}
+  pickupRangeUpgradeDisplay: {fileID: 30860710}
+  maxWeaponsUpgradeDisplay: {fileID: 1850519178}
 --- !u!1 &1575961259
 GameObject:
   m_ObjectHideFlags: 0
