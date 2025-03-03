@@ -14,7 +14,6 @@ public class CloseAttackWeapon : Weapon
         SetStats();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (statsUpdated == true)

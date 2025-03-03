@@ -5,15 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public float currentHealth, maxHealth;
-
     public Slider healthSlider;
-
-
     public static PlayerHealthController instance;
-
     public GameObject deathEffect;
 
     private void Awake()
@@ -29,7 +23,6 @@ public class PlayerHealthController : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -21,7 +21,6 @@ public class DamageNumberController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.U))
@@ -33,9 +32,6 @@ public class DamageNumberController : MonoBehaviour
     public void SpawnDamage(float damageAmount, Vector3 location)
     {
         int rounded = Mathf.RoundToInt(damageAmount);
-
-        //DamageNumber newDamage =  Instantiate(numberToSpawn, location, Quaternion.identity, numberCanvas);
-
         DamageNumber newDamage = GetFromPool();
         newDamage.Setup(rounded);
         newDamage.gameObject.SetActive(true);

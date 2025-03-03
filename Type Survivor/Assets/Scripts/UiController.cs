@@ -21,24 +21,18 @@ public class UiController : MonoBehaviour
 
     public LevelUpSelectionButton[] levelUpButtons;
     public GameObject levelUpPanel;
-
     public TMP_Text coinText;
 
     public PlayerStatUpgradeDisplay moveSpeedUpgradeDisplay, healthUpgradeDisplay, pickupRangeUpgradeDisplay, maxWeaponsUpgradeDisplay;
-
     public TMP_Text timeText;
-
     public GameObject levelEndScreen;
-
     public TMP_Text endTimeText;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

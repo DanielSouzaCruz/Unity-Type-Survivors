@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     public Transform sprite;
 
@@ -19,7 +18,6 @@ public class EnemyAnimation : MonoBehaviour
         speed = speed *Random.Range(.75f, 1.25f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         sprite.localScale = Vector3.MoveTowards(sprite.localScale, Vector3.one * activeSize, speed * Time.deltaTime);

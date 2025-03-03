@@ -16,7 +16,6 @@ public class DamageNumber : MonoBehaviour
         lifeCounter = lifeTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -26,7 +25,6 @@ public class DamageNumber : MonoBehaviour
 
             if(lifeCounter <= 0 )
             {
-                //Destroy(gameObject);
                 DamageNumberController.instance.PlaceInPool(this);
             }
         }

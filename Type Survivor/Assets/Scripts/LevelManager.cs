@@ -16,13 +16,11 @@ public class LevelManager : MonoBehaviour
     public float timer;
     public float waitToShowEndScreen = 1f;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameActive = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(gameActive == true)

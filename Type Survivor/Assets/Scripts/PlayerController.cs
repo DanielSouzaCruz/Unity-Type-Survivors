@@ -16,15 +16,12 @@ public class PlayerController : MonoBehaviour
 
     public float pickupRange = 1.5f;
 
-    //public Weapon activeWeapon;
-
     public List<Weapon> unassignedWeapons, assignedWeapons;
     public int maxWeapons = 3;
 
     [HideInInspector]
     public List<Weapon> fullyLevelledWeapons = new List<Weapon>();
 
-    // Start is called before the first frame update
     void Start()
     {
         if(assignedWeapons.Count == 0)
@@ -37,14 +34,11 @@ public class PlayerController : MonoBehaviour
         maxWeapons = Mathf.RoundToInt(PlayerStatController.instance.maxWeapons[0].value);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 moveInput = new Vector3(0f, 0f, 0f);
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
-
-        //Debug.Log(moveInput);
 
         moveInput.Normalize();
 

@@ -18,7 +18,6 @@ public class ExperienceLevelController : MonoBehaviour
     public int currentLevel = 1, levelCount = 100;
     public List<Weapon> weaponsToUpgrade;
 
-    // Start is called before the first frame update
     void Start()
     {
         while(expLevels.Count < levelCount)
@@ -27,7 +26,6 @@ public class ExperienceLevelController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -60,7 +58,6 @@ public class ExperienceLevelController : MonoBehaviour
             currentLevel = expLevels.Count - 1;
         }
 
-       // PlayerController.instance.activeWeapon.LevelUp();
        UiController.instance.levelUpPanel.SetActive(true);
 
         Time.timeScale = 0f;

@@ -16,7 +16,6 @@ public class PlayerStatController : MonoBehaviour
 
     public int moveSpeedLevel, healthLevel, pickupRangeLevel, maxWeaponsLevel;
 
-    // Start is called before the first frame update
     void Start()
     {
         for (int i = moveSpeed.Count - 1; i < moveSpeedLevelCount; i++)
@@ -35,7 +34,6 @@ public class PlayerStatController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(UiController.instance.levelUpPanel.activeSelf == true)

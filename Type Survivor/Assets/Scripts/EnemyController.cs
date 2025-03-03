@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     public Rigidbody2D theRB;
 
@@ -29,7 +28,6 @@ public class EnemyController : MonoBehaviour
         target = PlayerHealthController.instance.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(PlayerController.instance.gameObject.activeSelf == true)

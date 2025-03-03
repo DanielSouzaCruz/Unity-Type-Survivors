@@ -21,10 +21,8 @@ public class EnemySpawner : MonoBehaviour
     private int currentWave;
     private float waveCounter;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //spawnCounter = timeToSpawn;
         target = PlayerHealthController.instance.transform;
         dspawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 5f;
 
@@ -32,18 +30,9 @@ public class EnemySpawner : MonoBehaviour
         GoToNextWave();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*spawnCounter -= Time.deltaTime;
-        if(spawnCounter <= 0 )
-        {
-            spawnCounter = timeToSpawn;
-
-            GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint() , transform.rotation);
-            spawnedEnemies.Add(newEnemy);
-        }*/
-
+        
         if (PlayerHealthController.instance.gameObject.activeSelf)
         {
             if(currentWave <waves.Count)

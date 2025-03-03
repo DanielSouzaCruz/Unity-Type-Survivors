@@ -9,13 +9,11 @@ public class ZoneWeapon : Weapon
     private float spawnTime, spawnCounter;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         SetStats();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (statsUpdated == true)
@@ -42,6 +40,5 @@ public class ZoneWeapon : Weapon
         damager.transform.localScale = Vector3.one * stats[weaponLevel].range;
         spawnTime = stats[weaponLevel].timeBetweenAttacks;
         spawnCounter = 0f;
-
     }
 }

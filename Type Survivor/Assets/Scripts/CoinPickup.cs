@@ -13,13 +13,11 @@ public class CoinPickup : MonoBehaviour
     private float checkCounter;
 
     private PlayerController player;
-    // Start is called before the first frame update
     void Start()
     {
         player = PlayerController.instance;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (movingToPlayer == true)

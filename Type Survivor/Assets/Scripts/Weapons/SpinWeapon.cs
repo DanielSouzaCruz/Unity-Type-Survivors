@@ -15,13 +15,10 @@ public class SpinWeapon : Weapon
     {
         SetStats();
 
-        //UiController.instance.levelUpButtons[0].UpdateButtonDisplay(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime));
         holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime * stats[weaponLevel].speed));
 
         spawnCounter -= Time.deltaTime;
@@ -29,7 +26,6 @@ public class SpinWeapon : Weapon
         {
             spawnCounter = timeBetweenSpawn;
 
-            //Instantiate(fireballToSpawn, fireballToSpawn.position, fireballToSpawn.rotation, holder).gameObject.SetActive(true);
 
             for(int i = 0; i < stats[weaponLevel].amount; i++)
             {
